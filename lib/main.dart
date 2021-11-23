@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'splitview_page.dart';
+import 'gridview_page.dart';
 import 'home_page.dart';
 
 void main() {
@@ -17,7 +19,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/gridview': (context) => const GridViewPage(),
+        '/splitview': (context) => const SplitViewPage(),
+      },
     );
   }
 }
